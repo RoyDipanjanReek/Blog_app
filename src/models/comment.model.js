@@ -9,6 +9,10 @@ const commentSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+  post: {
+    type: Schema.Types.ObjectId,
+    ref: "Post",
+  },
 },{timestamps: true});
 
 export const Comment = mongoose.model("Comment", commentSchema);
